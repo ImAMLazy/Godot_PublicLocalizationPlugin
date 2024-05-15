@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://dttpny1o6a40l"]
+
+[ext_resource type="Script" path="res://addons/PublicLocalization/Scenes/SpeechElement.cs" id="2_wp11y"]
+
+[node name="VBoxContainer" type="HBoxContainer"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.098
+offset_left = 15.0
+offset_top = 11.0
+offset_right = -7.0
+offset_bottom = -12.504
+grow_horizontal = 2
+script = ExtResource("2_wp11y")
+
+[node name="btn_Remove" type="Button" parent="."]
+layout_mode = 2
+text = "Remove"
+
+[node name="KeyField" type="LineEdit" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.38
+mouse_filter = 2
+text = "RGOJWOGJBE"
+
+[node name="HeaderField" type="LineEdit" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.38
+mouse_filter = 1
+text = "SomeHeader"
+
+[node name="ValueField" type="LineEdit" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+
+[connection signal="pressed" from="btn_Remove" to="." method="_on_btn_remove_pressed"]
+[connection signal="focus_exited" from="HeaderField" to="." method="_on_header_field_focus_exited"]
+[connection signal="text_changed" from="HeaderField" to="." method="_on_header_field_text_changed"]
+[connection signal="text_submitted" from="HeaderField" to="." method="_on_header_field_text_submitted"]
+[connection signal="focus_exited" from="ValueField" to="." method="_on_value_field_focus_exited"]
+[connection signal="text_changed" from="ValueField" to="." method="_on_value_field_text_changed"]
+[connection signal="text_submitted" from="ValueField" to="." method="_on_value_field_text_submitted"]
